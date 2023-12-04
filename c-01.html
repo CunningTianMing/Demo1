@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <title>Season Switcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #seasonSelector{
+            float: right;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>季节切换</h1>
+
+<select id="seasonSelector" onchange="changeSeason()" title="切换">
+    <option value="spring">春天</option>
+    <option value="summer">夏天</option>
+    <option value="autumn">秋天</option>
+    <option value="winter">冬天</option>
+</select>
+
+<div id="seasonImage">
+    <!-- 初始为春天 -->
+    <img src="../images/spring.png" alt="Spring Image">
+</div>
+    <script>
+        function changeSeason() {
+            var seasonSelector = document.getElementById("seasonSelector");
+            var seasonImage = document.getElementById("seasonImage");
+            var selectedSeason = seasonSelector.value;
+
+            switch (selectedSeason) {
+                case "spring":
+                    seasonImage.innerHTML = '<img src="../images/spring.png" alt="Spring Image">';
+                    break;
+                case "summer":
+                    seasonImage.innerHTML = '<img src="../images/summer.png" alt="Summer Image">';
+                    break;
+                case "autumn":
+                    seasonImage.innerHTML = '<img src="../images/autumn.jpg" alt="Autumn Image">';
+                    break;
+                case "winter":
+                    seasonImage.innerHTML = '<img src="../images/winter.png" alt="Winter Image">';
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

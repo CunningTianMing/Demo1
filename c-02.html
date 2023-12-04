@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          height: 100vh;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f0f0f0;
+        }
+        #season-text {
+          font-size: 24px;
+          margin-right: 20px;
+        }
+        #season-image {
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+</head>
+<body>
+    <div>
+        <span id="season-text">Season: </span>
+        <select id="season-selector" onchange="changeSeason()">
+          <option value="spring">Spring</option>
+          <option value="summer">Summer</option>
+          <option value="autumn">Autumn</option>
+          <option value="winter">Winter</option>
+        </select>
+      </div>
+      
+      <img id="season-image" src="../images/spring.png" alt="Spring Image">
+      
+      <script>
+        function changeSeason() {
+          const seasonSelector = document.getElementById('season-selector');
+          const seasonImage = document.getElementById('season-image');
+          const seasonText = document.getElementById('season-text');
+      
+          const selectedSeason = seasonSelector.value;
+          let imageUrl = '';
+      
+          switch (selectedSeason) {
+            case 'spring':
+              imageUrl = '../images/spring.png';
+              break;
+            case 'summer':
+              imageUrl = '../images/summer.png';
+              break;
+            case 'autumn':
+              imageUrl = '../images/autumn.jpg';
+              break;
+            case 'winter':
+              imageUrl = '../images/winter.png';
+              break;
+            default:
+              break;
+          }
+      
+          seasonImage.src = imageUrl;
+          seasonText.textContent = `Season: ${selectedSeason.charAt(0).toUpperCase() + selectedSeason.slice(1)}`;
+        }
+      </script>
+</body>
+</html>

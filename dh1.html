@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航切换</title>
+    <style>
+        .tab-box {
+            width: 100%;
+            height: 100%;
+            /*border: 2px solid greenyellow;*/
+        }
+        /* display: flex弹性盒子，水平方向*/
+        .tab-head {
+            display: flex;
+        }
+        /* flex-grow生长为100%*/
+        .tab-head-div {
+            flex-grow: 1;
+            text-align: center;
+            background: green;
+            border-right: 1px solid white;
+            line-height: 40px;
+        }
+        .tab-head-div.current {
+            background: wheat;
+        }
+        .tab-body-div {
+            display: none;
+        }
+        .tab-body-div.current {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-box">
+        <div class="tab-head">
+            <div class="tab-head-div current" onclick="selectTab(0)">标签一</div>
+            <div class="tab-head-div" onclick="selectTab(1)">标签二</div>
+            <div class="tab-head-div" onclick="selectTab(2)">标签三</div>
+            <div class="tab-head-div" onclick="selectTab(3)">标签四</div>
+            <div class="tab-head-div" onclick="selectTab(4)">标签五</div>
+            
+        </div>
+        <div class="tab-body">
+            <div class="tab-body-div current"><h1>1号页面</h1>
+                <p>线下不便转线上，中国消费韧性强潜力足特点没改变。
+                    国家统计局数据显示，4月我国社会消费品零售总额同比下降11.1%。对此，商务部新闻发言人束珏
+                    婷5月19日表示，总体看，疫情冲击影响是阶段性的、暂时的，我国消费韧性强、潜力足的特点没
+                    有改变，消费发展长期向好的基本面没有改变。
+                    线下不便转线上，中国消费韧性强潜力足特点没改变。国家统计局数据显示，4月我国社会消费品
+                    零售总额同比下降11.1%。对此，商务部新闻发言人束珏婷5月19日表示，总体看，疫情冲击影响是
+                    阶段性的、暂时的，我国消费韧性强、潜力足的特点没有改变，消费发展长期向好的基本面没有改变。
+                    线下不便转线上，中国消费韧性强潜力足特点没改变。国家统计局数据显示，4月我国社会消费品零售
+                    总额同比下降11.1%。对此，商务部新闻发言人束珏婷5月19日表示，总体看，疫情冲击影响是阶段性的
+                    、暂时的，我国消费韧性强、潜力足的特点没有改变，消费发展长期向好的基本面没有改变。</p>
+            </div>
+            <div class="tab-body-div">
+                <p>线下不便转线上，中国消费韧性强潜力足特点没改变。
+                    国家统计局数据显示，4月我国社会消费品零售总额同比下降11.1%。对此，商务部新闻发言人束珏
+                    婷5月19日表示，总体看，疫情冲击影响是阶段性的、暂时的，我国消费韧性强、潜力足的特点没
+                    有改变，消费发展长期向好的基本面没有改变。
+                    线下不便转线上，中国消费韧性强潜力足特点没改变。国家统计局数据显示，4月我国社会消费品
+                    零售总额同比下降11.1%。对此，商务部新闻发言人束珏婷5月19日表示，总体看，疫情冲击影响是
+                    阶段性的、暂时的，我国消费韧性强、潜力足的特点没有改变，消费发展长期向好的基本面没有改变。
+                    线下不便转线上，中国消费韧性强潜力足特点没改变。国家统计局数据显示，4月我国社会消费品零售
+                    总额同比下降11.1%。对此，商务部新闻发言人束珏婷5月19日表示，总体看，疫情冲击影响是阶段性的
+                    、暂时的，我国消费韧性强、潜力足的特点没有改变，消费发展长期向好的基本面没有改变。</p>
+            </div>
+            <div class="tab-body-div">
+                <p>线下不便转线上，中国消费韧性强潜力足特点没改变。
+                    国家统计局数据显示，4月我国社会消费品零售总额同比下降11.1%。对此，商务部新闻发言人束珏
+                    婷5月19日表示，总体看，疫情冲击影响是阶段性的、暂时的，我国消费韧性强、潜力足的特点没
+                    有改变，消费发展长期向好的基本面没有改变。
+                    线下不便转线上，中国消费韧性强潜力足特点没改变。国家统计局数据显示，4月我国社会消费品
+                    零售总额同比下降11.1%。对此，商务部新闻发言人束珏婷5月19日表示，总体看，疫情冲击影响是
+                    阶段性的、暂时的，我国消费韧性强、潜力足的特点没有改变，消费发展长期向好的基本面没有改变。
+                    线下不便转线上，中国消费韧性强潜力足特点没改变。国家统计局数据显示，4月我国社会消费品零售
+                    总额同比下降11.1%。对此，商务部新闻发言人束珏婷5月19日表示，总体看，疫情冲击影响是阶段性的
+                    、暂时的，我国消费韧性强、潜力足的特点没有改变，消费发展长期向好的基本面没有改变。</p>
+                
+                
+            </div>
+            <div class="tab-body-div">4号页面</div>
+            <div class="tab-body-div">5号页面</div>
+            
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="../js/t2.js" ></script> -->
+    <script>
+        
+        //   1.把tab-body-div和tab-head-div选中状态移除
+        //   2.把制定下表的index和tab-head-div和tab-body-div的选中状态加上去
+        
+        var tabs = document.getElementsByClassName('tab-head-div'); //标签头集合
+        var tab_bodys = document.getElementsByClassName('tab-body-div'); //标签内容集合
+        
+        function selectTab(index) {
+            
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('current');
+                tab_bodys[i].classList.remove('current');
+            }
+            
+            tabs[index].classList.add('current');
+            tab_bodys[index].classList.add('current');
+        }
+ 
+    </script>
+</body>
+</html>
